@@ -1,0 +1,134 @@
+html {
+    font-size: 16px;
+    font-family: 'Gugi', cursive;
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 450px;
+    height: auto;
+    background-color: rgba(31, 31, 49, 0.9);
+    margin: 5% auto;
+    padding-bottom: 1rem;
+}
+
+.form_top {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0 1rem;
+    border-top: solid .4rem rgb(136, 142, 160);
+}
+
+.form_top h2 {
+    font-weight: bold;
+    color: rgb(109, 123, 160);
+}
+
+h2 span {
+    color: #FFFFFF;
+}
+
+.form_reg {
+    padding: 0.2rem;
+    display: flex;
+    margin-left: 60px;
+    margin-right: 60px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn_form {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.input, .btn_submit, .btn_reset {
+    background-color: #EFEFEF;
+    padding: .5rem;
+    margin: .5rem 0;
+    border: none;
+    border-bottom: solid rgb(43, 54, 207) .2rem;
+    transition: all .5s;
+}
+
+.input, textarea {
+    width: 100%;
+    font-family: 'Gugi', cursive;
+}
+
+.input:focus {
+    border-bottom: solid rgb(60, 55, 104) .2rem;
+}
+
+.btn_submit, .btn_reset {
+    width: 30%;
+    border-bottom: none;
+    background-color: rgb(60, 55, 104);
+    color: white;
+    font-family: 'Gugi', cursive;
+}
+
+.input:focus {
+    border-bottom: solid rgb(60, 55, 104) .2rem;
+}
+
+#box-title {
+    font-size: 20px;
+}
+
+label {
+    display: block;
+    width: 100%;
+    color:rgb(153, 159, 177);
+}
+
+.box select {
+    background: #FFFFFF;
+    color: #000000;
+    font-family: 'Gugi', cursive;
+    padding: 9px;
+    width: 100%;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.checkbox {
+    text-align: justify;
+}
+
+input.error, textarea.error {
+    background-color: #F0C4BA;
+    padding: .5rem;
+    margin: .5rem 0;
+    border: none;
+    border-bottom: solid #AB2103 .2rem;
+    transition: all .5s;
+    width: 100%;
+    font-family: 'Gugi', cursive;
+}
+
+.caja_flotante {
+    font-size: 13px;
+    font-family: 'Gugi', cursive;
+    width: 100%;
+    background-color: #EFEFEF;
+    padding: .5rem;
+    margin: .5rem 0;
+    border: none;
+    border-bottom: solid rgb(43, 54, 207) .2rem;
+    transition: all .5s;
+}
+
+#btn_simple {
+    width: 100%;
+    border-bottom: none;
+    background-color: rgb(60, 55, 104);
+    color: white;
+    font-family: 'Gugi', cursive;
+    border: none;
+}

@@ -1,0 +1,94 @@
+#Contactos {
+    padding-bottom: 0;
+    background-color: #fafafa;
+    padding-top: 80px;
+}
+
+#Contactos .box-container {
+    max-width: 1200px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#Contactos .box-contactos {
+    width: 1150px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#Contactos .box-item {
+    margin-top: 0;
+    width: 33%;
+    text-align: center;
+    padding: 0px;
+    transform: scale3d(0.8, 0.8, 1);
+}
+
+#Contactos .row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#Contactos .box-column {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#Contactos .box-header {
+    text-align: center;
+    display: block;
+}
+
+#Contactos .box-header .p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+#Contactos .box-shadow-effect {
+    background-color:#FFF;
+    padding: 50px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid #FFF;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.40), 0 15px 12px rgba(0, 0, 0, 0.02);
+}
+
+#Contactos .box-image {
+    transform-style: preserve-3d;
+    max-width: 125px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+
+#Contactos .box-text {
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 0 17px 0;
+    font-weight: 300;
+}
+
+#Contactos .contact-name {
+    margin: -17px auto 0;
+    display: table;
+    width: auto;
+    background-color: #02ccba;
+    color: #fff;
+    padding: 9px 35px;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}

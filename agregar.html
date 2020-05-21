@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario</title>
+        <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
+        <link href="styles/agregar.css" rel=stylesheet>
+        <script src="scripts/agregar.js" type="text/javascript"></script>
+        <script src="scripts/crear_correo.js" type="text/javascript"></script>
+        <script src="scripts/crear_telefono.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="form_top">
+                <h2>Agregar<span>Contacto</span></h2>
+            </div>
+            <form name="n_form" class="form_reg" method="POST" action="php/insertData.php" onsubmit="return validar()" enctype="multipart/form-data">
+                <div>
+                    <label id="box-title">Datos del Contacto: </label>
+                    <br>
+                </div>
+                <div>
+                    <label for="nombre">Nombre: </label>
+                    <input class="input" type="text" id="nombre" name="nombre" onblur="revisarTexto( this )" placeholder="&#128100; Ingrese nombre"> 
+                </div>
+                <div>
+                    <label for="p_apellido">Apellido Paterno: </label>
+                    <input class="input" type="text" id="p_apellido" name="p_apellido" placeholder="&#128100; Ingrese primer apellido">
+                </div>
+                <div>
+                    <label for="s_apellido">Apellido Materno </label>
+                    <input class="input" type="text" id="s_apellido" name="s_apellido" placeholder="&#128100; Ingrese segundo apellido">
+                </div>
+                <div>
+                    <label for="fech_nac">Fecha de Nacimiento: </label>
+                    <input class="input" type="date" id="fech_nac" name="fech_nac" placeholder="&#128100; Ingrese fecha de nacimiento">
+                </div>
+                <label>Grupo:</label>
+                <div class="box">
+                    <select name="grupo" size="1">
+                        <option value="0">Seleccione un grupo</option>
+                        <option value="Amigos">Amigos</option>
+                        <option value="Familia">Familia</option>
+                        <option value="Trabajo">Trabajo</option>
+                        <option value="Estudios">Estudios</option>
+                        <option value="Favoritos">Favoritos</option>
+                    </select>
+                </div>
+
+                <label>Departamento:</label>
+                <div class="box">
+                    <select name="departamento" size="1">
+                        <option value="0">Seleccione un departamento</option>
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Ancash">Ancansh</option>
+                        <option value="Apurimac">Apurimac</option>
+                        <option value="Arequipa">Arequipa</option>
+                        <option value="Ayacucho">Ayacucho</option>
+                        <option value="Cajamarca">Cajamarca</option>
+                        <option value="Cusco">Cusco</option>
+                        <option value="Huancavelica">Huancavelica</option>
+                        <option value="Huanuco">Huanuco</option>
+                        <option value="Ica">Ica</option>
+                        <option value="Junin">Junin</option>
+                        <option value="La Libertad">La Libertad</option>
+                        <option value="Lambayeque">Lambayeque</option>
+                        <option value="Lima">Lima</option>
+                        <option value="Loreto">Loreto</option>
+                        <option value="Madre de Dios">Madre de Dios</option>
+                        <option value="Moquegua">Moquegua</option>
+                        <option value="Pasco">Pasco</option>
+                        <option value="Piura">Piura</option>
+                        <option value="Puno">Puno</option>
+                        <option value="San Martin">San Martin</option>
+                        <option value="Tacna">Tacna</option>
+                        <option value="Tumbes">Tumbes</option>
+                        <option value="Ucayali">Ucayali</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="distrito">Distrito: </label>
+                    <input class="input" type="text" id="distrito" name="distrito" placeholder="&#127968; Ingrese distrito de residencia">
+                </div>
+                <div>
+                    <label for="direccion">Direccion: </label>
+                    <input class="input" type="text" id="direccion" name="direccion" placeholder="&#127968; Ingrese direccion del hogar">
+                </div>
+                <div>
+                    <label for="imagen">Imagen:</label>
+                    <input name="imagen" type="file" />
+                </div>
+                <div>
+                    <br>
+                    <label id="box-title">Correo del Contacto: </label>
+                    <br>
+                </div>
+                <div id="field1">
+                    <label for="mail">Email: </label>
+                    <input class="input" type="mail" id="mail" name="mail"  onblur="revisarEmail( this )" placeholder="@ Ingrese correo electronico">
+                </div>
+                <label>Rubro del email:</label>
+                <div id="box1" class="box">
+                    <select name="rubro_correo" size="1">
+                        <option value="0">Seleccione un rubro</option>
+                        <option value="Particular">Particular</option>
+                        <option value="Trabajo">Trabajo</option>
+                    </select>
+                </div>
+                <input type="button" id="btn_simple" value="Agregar otro correo" onclick="crear_correo()">
+
+                <div>
+                    <br>
+                    <label id="box-title">Telefono del Contacto: </label>
+                    <br>
+                </div>
+                <div id="field2">
+                    <label for="telefono">Telefono:</label>
+                    <input class="input" type="text" id="telefono" name="telefono"  onblur="revisarNumero( this )" placeholder="&#9742; Ingrese numero de telefono">
+                </div>
+                <label>Rubro del telefono:</label>
+                <div id="box2" class="box">
+                    <select name="rubro_telefono" size="1">
+                        <option value="0">Seleccione un rubro</option>
+                        <option value="Particular">Particular</option>
+                        <option value="Trabajo">Trabajo</option>
+                    </select>
+                </div>
+                <label>Telefonia:</label>
+                <div id="telefonia" class="box">
+                    <select name="telefonia" size="1">
+                        <option value="0">Seleccione la telefonia</option>
+                        <option value="Movil">Movil</option>
+                        <option value="Fijo">Fijo</option>
+                    </select>
+                </div>
+                <input type="button" id="btn_simple" value="Agregar otro numero" onclick="crear_telefono()">
+                <br>
+                <div class="btn_form">
+                    <input class="btn_reset" type="reset" value="Volver">
+                    <input class="btn_submit" type="submit" value="Agregar">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
